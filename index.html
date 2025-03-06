@@ -6,17 +6,27 @@
     <title>ImKairat</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7fc;
-            color: #333;
+            background: linear-gradient(135deg, #121212, #1a1a1a); /* Subtle dark gradient */
+            color: #e1e1e1; /* Light text */
         }
         header {
-            background-color: #4CAF50;
+            background-color: #1a237e; /* Deep blue for header */
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
+            border-bottom: 1px solid #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
         }
         section {
             display: flex;
@@ -25,69 +35,87 @@
             padding: 40px;
         }
         .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #1f1f1f; /* Dark background for cards */
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Softer shadow */
             padding: 20px;
             margin: 20px;
-            width: 300px;
+            width: 280px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
         }
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px); /* Slight hover effect */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
         }
         .card img {
             border-radius: 10px;
             width: 100%;
             height: auto;
+            max-height: 200px;
+            object-fit: cover; /* Ensures proper image scaling */
         }
         .card h3 {
             margin-top: 20px;
             font-size: 24px;
-            color: #333;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .card p {
             font-size: 16px;
-            color: #666;
+            color: #b0b0b0; /* Light gray text */
+            line-height: 1.6;
+        }
+        /* Custom colors for words */
+        .python {
+            color: #FFEB3B; /* Yellow for Python */
+        }
+        .rust {
+            color: #FF5733; /* Orange-Red for Rust */
+        }
+        .linux {
+            color: #2196F3; /* Blue for Linux */
         }
         footer {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #1a1a1a;
+            color: #ffffff;
             text-align: center;
-            padding: 10px;
-            position: absolute;
+            padding: 20px 10px;
+            position: fixed;
             bottom: 0;
             width: 100%;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to My Page</h1>
-        <p>Explore my experiences with Python, Rust, and Linux!</p>
+        <p>Explore my experiences with <span class="python">Python</span>, <span class="rust">Rust</span>, and <span class="linux">Linux</span>!</p>
     </header>
     
     <section>
         <!-- Python Experience Card -->
         <div class="card">
             <img src="assets/python_icon.png" alt="Python">
-            <h3>My Python Experience</h3>
-            <p>I've worked with Python for various projects, including scripting, automation, and backend development. It is one of my primary tools for efficient coding.</p>
+            <h3>My <span class="python">Python</span> Experience</h3>
+            <p>I've worked with <span class="python">Python</span> for various projects, including scripting, automation, and backend development. It is one of my primary tools for efficient coding.</p>
         </div>
         
         <!-- Rust Experience Card -->
         <div class="card">
             <img src="assets/rust_icon.png" alt="Rust">
-            <h3>My Rust Experience</h3>
-            <p>Rust is my go-to language for high-performance applications. I’ve used it to rewrite scripts for better speed and memory safety.</p>
+            <h3>My <span class="rust">Rust</span> Experience</h3>
+            <p><span class="rust">Rust</span> is my go-to language for high-performance applications. I’ve used it to rewrite scripts for better speed and memory safety.</p>
         </div>
 
         <!-- Linux Experience Card -->
         <div class="card">
             <img src="assets/arch_linux_icon.png" alt="Linux">
-            <h3>My Linux Experience</h3>
-            <p>Linux is my preferred operating system for development. I’ve configured multiple Linux servers and love working with the command line and open-source tools.</p>
+            <h3>My <span class="linux">Linux</span> Experience</h3>
+            <p><span class="linux">Linux</span> is my preferred operating system for development. I’ve configured multiple <span class="linux">Linux</span> servers and love working with the command line and open-source tools.</p>
         </div>
     </section>
     
